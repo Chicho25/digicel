@@ -15,16 +15,36 @@
      include("header.php");
 
      if (isset($_POST['eliminar_lista'])) {
-
        $array_factura = array("STAT" => 3,
                               "FECHA_REGISTRO"=>date("m-d-Y H:i:s"));
-
        UpdateRec("FACTURAS", "N_PEDIDO = '".$_POST['n_pedido_list']."'", $array_factura);
 
        $message = '<div class="alert alert-danger">
                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                      <strong>Pedido Regresado a facturas por imprimir</strong>
                    </div>';
+     }
+
+     if (isset($_POST['reimprimir_documento'])) {
+
+       $ac = "reimprimir";
+       $td = "0";
+       $nd = $_POST['n_documento'];
+
+       $tipo_documento = $td;
+       $numero_documento = $nd;
+       $exe = 'C:\xampp\htdocs\Debug\reprint\ConsoleApp1.exe';
+       $accion = $ac;
+       $parametros = $tipo_documento.";".$numero_documento;
+       $dir = $exe ." ".$accion." ".$parametros;
+        exec($dir, $output, $return);
+       if ($return  == 0	)
+       {
+       	//echo "error al ejecutar la accion.</br>";
+       }else{
+       	//echo "Numero de secuencia fiscal: ".$return;
+       }
+
      }
 
      $where = "where (1=1)";
@@ -109,7 +129,7 @@
                               <th>Precio Unitario</th>
                               <th>Regresar</th>
                               <th>Ver Detalle</th>
-                              <th>PDF</th>
+                              <th>ReImpri</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -135,7 +155,10 @@
                                   <a href="modal_ver_detalle_factura.php?N_PEDIDO=<?php echo $value['N_PEDIDO']?>" title="Detalle de Productos" data-toggle="ajaxModal" class="btn btn-sm btn-icon btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
                               </td>
                               <td>
-                                  <a href="pdf_generate.php?N_PEDIDO=<?php echo $value['ID']?>" title="PDF" class="btn btn-sm btn-icon btn-primary" target="_blank"><i class="glyphicon glyphicon-file"></i></a>
+                                <?php if ($value['FACTURA_REFERENCIA'] == ''): ?>
+                                <?php else : ?>
+                                  <a href="modal_reimprimir_documento.php?N_DOCUMENTO=<?php echo $value['FACTURA_REFERENCIA']?>" data-toggle="ajaxModal" title="Reimprimir documento" class="btn btn-sm btn-icon btn-primary" target="_blank"><i class="glyphicon glyphicon-print"></i></a>
+                                <?php endif; ?>
                               </td>
                           </tr>
                           <?php

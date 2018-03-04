@@ -12,7 +12,7 @@
 
 <div class="modal-dialog">
   <div class="modal-content">
-  	<form role="form" class="form-horizontal" id="role-form"  method="post" action="" enctype="multipart/form-data">
+  	<form role="form" class="form-horizontal" id="role-form"  method="post" action="">
 	    <div class="modal-header">
 	      <button type="button" class="close" data-dismiss="modal">&times;</button>
 	      <h4 class="modal-title">Detalle de los Productos </h4>
@@ -38,10 +38,11 @@
                     ?>
                   <tr>
                       <td class="tbdata"> <?php echo $value['ID']?> </td>
-                      <td class="tbdata"> <?php echo $value['N_PEDIDO']?> </td>
+                      <td class="tbdata"> <?php echo $value['N_PEDIDO']?>
+                        <input type="hidden" value="<?php echo $value['N_PEDIDO']?>" name="n_pedido"></td>
                       <td class="tbdata"> <?php echo $value['SKU']?> </td>
                       <td class="tbdata"> <?php echo $value['CANTIDAD']?> </td>
-                      <td class="tbdata"> <?php echo $value['PRECIO_UNITARIO']?> </td>
+                      <td class="tbdata"> <input class="form-control" value="<?php echo $value['PRECIO_UNITARIO']?>" name="precio_unitario"> </td>
                       <td class="tbdata"> <?php echo $value['DESCRIPCION']?> </td>
                   </tr>
                   <?php
@@ -55,6 +56,7 @@
     </div>
 	    <div class="modal-footer">
 	      <a href="#" class="btn btn-default" data-dismiss="modal">Cerrar</a>
+        <button type="submit" name="cambiar_precio" class="btn btn-primary">Cambiar Precio</button>
 	    </div>
     </form>
   </div><!-- /.modal-content -->
