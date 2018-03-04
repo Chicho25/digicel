@@ -1,0 +1,117 @@
+/*----------------------------------------------
+css settings for HTML div exactCenter 
+------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+.wrap{
+   margin:0;
+   padding: 0;
+}
+
+#main{
+width:60%;
+margin:auto;
+font-family:raleway;
+//border:1px solid green;
+margin-left: 20%;
+}
+
+span{
+color:red;
+}
+
+#h1{
+text-align:center;
+font-size:35px !important;
+
+}
+
+h2{
+background-color: #FEFFED;
+text-align:center;
+border-radius: 10px 10px 0 0;
+padding:30px;
+margin: 0px -40px -40px -40px ;
+border-bottom: 1px solid #ccc;
+}
+
+
+
+#login{
+width:60%;
+//float: left;
+border-radius: 10px;
+font-family:raleway;
+border: 2px solid #ccc;
+padding: 10px 40px 25px;
+margin-top: 30px;
+margin-left: 20%;
+}
+ 
+input[type=text],input[type=textarea]{
+width:99.5%;
+padding: 10px;
+margin-top: 8px;
+border: 1px solid #ccc;
+padding-left: 5px;
+font-size: 16px;
+font-family:raleway;
+
+} 
+input[type=radio]{
+       vertical-align: middle;
+    margin: -4px 0 0 2px !important;
+
+}
+input[type=submit]{
+width: 100%;
+background-color:#FFBC00;
+color: white;
+border: 2px solid #FFCB00;
+padding: 10px;
+font-size:20px;
+cursor:pointer;
+border-radius: 5px;
+margin-bottom: 15px;
+}
+#profile{
+padding:50px;
+border:1px dashed grey;
+font-size:20px;
+background-color:#DCE6F7;
+}
+
+#logout{
+float:right;
+padding:5px;
+border:dashed 1px gray;
+}
+
+a{
+text-decoration:none;
+color: cornflowerblue;
+}
+
+i{
+color: cornflowerblue;
+}
+#note {
+    word-wrap: break-word;
+    margin: 10px 24%;
+    width: 62%;
+    padding: 10px 50px;
+    font-size: 16px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+/*-----------------------------------------------------------------
+css settings for right side advertisement
+------------------------------------------------------------------*/
+#formget{
+float:right;
+}	

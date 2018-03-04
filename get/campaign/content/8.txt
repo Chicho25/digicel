@@ -1,0 +1,17 @@
+----------------------------- servidor de prueba -----------------
+
+Mysql: http://192.241.212.34/phpmyadmin/ clubunion_c clubunion_c xUaRvghJf3
+Wp-admin: http://cudev1.dchain.com/wp-admin demo fe01ce2a7fbac8fafa
+Web-file manager:  http://192.241.212.34:8000 cu 3Kyex576gfh
+
+------------------------------ servidor de produccion -------------
+
+web: http://club-union.com/
+acceso wp: http://club-union.com/wp-login.php parrieta 67#*FZMDF#$mBbAk
+
+base de datos: http://198.199.86.149/phpmyadmin/ club3_3 o0yaEvJW5f 
+select count(*) as contar from wp_users where id not in(3, 7, 14, 17, 21, 26)
+
+FTP: 198.199.86.149  user:club3      Password:cEiUym98y3
+
+9910101000

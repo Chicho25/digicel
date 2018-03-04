@@ -1,0 +1,4 @@
+- Filtros de busquedas en List Users, los filtros son por name, last name, 
+email
+- Quitar el bonton de "Download" colocar un link con el nombre del archivo.
+- 

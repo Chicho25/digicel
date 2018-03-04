@@ -1,0 +1,10 @@
+attached
+email
+producto
+monto
+cantidad
+mensaje
+nota
+
+oppid => optionid
+id_contact => contactid

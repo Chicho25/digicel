@@ -1,0 +1,4 @@
+-Seleccionar un Business luego un contacto y seguir con la oportunidad
+Estos Select tienen que ser con auto completado. 
+
+-ver mas ademnate minuto 28:00
