@@ -69,6 +69,7 @@
                 ?>
                 <header class="panel-heading">
                           <span class="h4">Lista de Usuarios</span>
+                          <h1>otra cosa</h1>
                 </header>
                 <div class="panel-body">
                     <form method="post">
