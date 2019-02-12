@@ -15,14 +15,20 @@
 
      if (isset($_POST['cambiar_precio'])) {
 
-       $array_factura = array("PRECIO_UNITARIO"=>$_POST['precio_unitario']);
+       foreach ($_POST['id_detail'] as $key => $value) {
 
-       UpdateRec("DETALLE_FACTURA", "N_PEDIDO = '".$_POST['n_pedido']."'", $array_factura);
+       $array_factura = array("PRECIO_UNITARIO"=>$_POST['precio_unitario'][$key]);
+
+       UpdateRec("DETALLE_FACTURA", "ID = '".$value."'", $array_factura);
+
+     }
 
        $message = '<div class="alert alert-danger">
                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                      <strong>Precio Unitario Modificado</strong>
                    </div>';
+
+
      }
 
      if (isset($_POST['eliminar_lista'])) {

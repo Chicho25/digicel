@@ -37,12 +37,14 @@
                     foreach ($arrUser as $key => $value) {
                     ?>
                   <tr>
-                      <td class="tbdata"> <?php echo $value['ID']?> </td>
+                      <td class="tbdata"> <?php echo $value['ID']?>
+                        <input type="hidden" value="<?php echo $value['ID']?>" name="id_detail[]">
+                      </td>
                       <td class="tbdata"> <?php echo $value['N_PEDIDO']?>
                         <input type="hidden" value="<?php echo $value['N_PEDIDO']?>" name="n_pedido"></td>
                       <td class="tbdata"> <?php echo $value['SKU']?> </td>
                       <td class="tbdata"> <?php echo $value['CANTIDAD']?> </td>
-                      <td class="tbdata"> <input class="form-control" value="<?php echo $value['PRECIO_UNITARIO']?>" name="precio_unitario"> </td>
+                      <td class="tbdata"> <input class="form-control" value="<?php echo $value['PRECIO_UNITARIO']?>" name="precio_unitario[]"> </td>
                       <td class="tbdata"> <?php echo $value['DESCRIPCION']?> </td>
                   </tr>
                   <?php

@@ -33,6 +33,7 @@
      }
 
       $arrfactu = GetRecords("select
+                              top 100
                               facturas.FACTURA_REFERENCIA,
                               facturas.SECUENCIA_FISCAL,
                               facturas.N_PEDIDO,
@@ -54,6 +55,7 @@
                               facturas.METODO_PAGO,
                               facturas.FACTURA_REFERENCIA,
                               facturas.SECUENCIA_FISCAL
+                              order by facturas.FECHA_REGISTRO desc
                               "); ?>
 	<section id="content">
           <section class="vbox">

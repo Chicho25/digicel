@@ -66,6 +66,7 @@
      }
 
       $arrUser = GetRecords("Select
+                              TOP 100
                             	FACTURAS.ID,
                             	FACTURAS.N_PEDIDO,
                             	FACTURAS.DEALER_NAME,
@@ -78,7 +79,8 @@
                             	from FACTURAS
                                $where
                                AND
-                               FACTURAS.STAT = 4"); ?>
+                               FACTURAS.STAT = 4
+                               ORDER BY ID DESC"); ?>
 	<section id="content">
           <section class="vbox">
             <section class="scrollable padder">
@@ -146,10 +148,10 @@
                               <td class="tbdata"> <?php echo $value['SUMA_CANTIDAD']?> </td>
                               <td class="tbdata"> <?php echo $value['SUMA_PRECIO']?> </td>
                               <td>
-                                  <?php if ($value['FACTURA_REFERENCIA'] == ''): ?>
+                                  <?php //if ($value['FACTURA_REFERENCIA'] == ''): ?>
                                     <a href="modal_regresar_factura.php?N_PEDIDO=<?php echo $value['N_PEDIDO']?>" title="Regresar" data-toggle="ajaxModal" class="btn btn-sm btn-icon btn-primary"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                                  <?php else : ?>
-                                  <?php endif; ?>
+                                  <?php //else : ?>
+                                  <?php //endif; ?>
                               </td>
                               <td>
                                   <a href="modal_ver_detalle_factura.php?N_PEDIDO=<?php echo $value['N_PEDIDO']?>" title="Detalle de Productos" data-toggle="ajaxModal" class="btn btn-sm btn-icon btn-primary"><i class="glyphicon glyphicon-eye-open"></i></a>
